@@ -23,19 +23,19 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         // The message start string is designed to be unlikely to occur in normal data.
-        pchMessageStart[0] = 0x05;
+        pchMessageStart[0] = 0x03;
         pchMessageStart[1] = 0x05;
-        pchMessageStart[2] = 0x04;
+        pchMessageStart[2] = 0x03;
         pchMessageStart[3] = 0x05;
-        nDefaultPort = 15588;
-        nRPCPort = 15589;
+        nDefaultPort = 15591;
+        nRPCPort = 15590;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
         nSubsidyHalvingInterval = 1051200;
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
   
-        const char* pszTimestamp = "Twitter Raises Price Range for Its IPO - NYTimes 11/5/2013";
+        const char* pszTimestamp = "Twitter set for volatile debut after IPO raises at least $1.8 billion 11/7/2013";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -48,7 +48,7 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = 1383694700;
         genesis.nBits    = 0x1e0fffff;
-        genesis.nNonce   = 1628798;
+        genesis.nNonce   = 389929;
         
         //// debug print
         hashGenesisBlock = genesis.GetHash();
@@ -63,8 +63,8 @@ public:
         genesis.print();
         
         
-        assert(hashGenesisBlock == uint256("0x00000816da509d595d95e35b770e8b48d56cc5b0a6dbd6987a9eaa73d1dffb72"));
-        assert(genesis.hashMerkleRoot == uint256("0x5d747c6dabd2ed73102f062abbe381fd1d7c93f9dfa60a58f391afabca36e512"));
+        assert(hashGenesisBlock == uint256("0x000007873f42ad4c778411660f56a912fed2522764c7f9bec6471b2d54363d25"));
+        assert(genesis.hashMerkleRoot == uint256("0x3ee6630d1347f09903beff30360962c6da6ab7d7b4eb9c44705d2a71ed649774"));
 
         vSeeds.push_back(CDNSSeedData("", ""));
 
